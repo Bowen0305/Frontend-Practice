@@ -1,0 +1,79 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.homelink{
+    display: flex;
+    gap: 3em;
+    padding: 5em;
+    position: relative;
+}
+.homelink a{
+    font-size: 2rem;
+    color: black;
+    position: relative;
+    text-decoration: none;
+    top: 12px;
+}
+.nav_bar{
+    margin: 0 0;
+}
+.nav_bar ul{
+    display: flex;
+    list-style-type: none;
+    gap: 4em;
+}
+.nav_bar li a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+
+.main{
+    display: flex;
+    margin-top: 11em;
+}
+.left{
+    width: 70%;
+}
+.right{
+    flex-grow: 1;
+}
+h1{
+    font-size: 5.5rem;
+    margin: 0;
+}
+.left img{
+    width: 50%;
+}
+.left p{
+    font-size: 1.8rem;
+    width: 68%;
+}
+.right img{
+    width: 70%;
+    border-radius: .8em;
+}
+.left a{
+    font-size: 2.8rem;
+    text-decoration: none;
+    color: black;
+    background-color:rgb(229, 187, 81);
+    font-weight: bold;
+    padding: .5em 1em;
+    border-radius: .5em;
+}

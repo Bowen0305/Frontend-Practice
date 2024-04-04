@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <title>Practice 2</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- import fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrap">
+            <header>
+                <div class="header-left">
+                    <a href="#">
+                        <img src="images/logo.svg" alt="logo">
+                    </a>
+                    <div class="divider"></div>
+                    <a href="#" class="home hide-mobile">Home</a>
+                </div>
+    
+                <!-- navigation bar -->
+                <nav class="header-right">
+                    <a href="#" class="menu-open hide-desktop">
+                        <img src="images/menu.svg" alt="open menu">
+                    </a>
+                    <ul>
+                        <li class="hide-desktop"><a href="#" class="menu-close"><img src="images/close.svg" alt="close menu"></a></li>
+                        <li><a href="#">Our Food</a></li>
+                        <li><a href="#">Ingredients</a></li>
+                        <li><a href="#">Studies</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+            </header>
+    
+            <!-- hero section -->
+            <main>
+                <h1>Your cat will go <img src="images/bonkers.svg" alt="bonkers"></h1>
+                <p class="subhead">
+                    ..for the world's best testing cat food, sourced with only the 
+                    finest ingredients. Made with love from the heart of Mississippi
+                </p>
+                <a href="#" class="primary-cta">Get Bonkers</a>
+            </main>
+    
+            <div class="cat-container">
+                <div class="cat">
+                    <img src="images/cat.png" alt="cat image">
+                    <div class="inner-circle"></div>
+                    <div class="outer-circle"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script>
+            // specify the object in HTML
+            // use let for future modification
+            const menu = document.querySelector('nav ul')
+            const menuBtn = document.querySelector('.menu-open')
+            const closeBtn = document.querySelector('.menu-close')
+
+            // when someone clicked the menu buttpm
+            menuBtn.addEventListener('click' , () =>{
+                // add class 'open' to ul
+                menu.classList.add('open')
+            })
+            closeBtn.addEventListener('click' , ()=>{
+                menu.classList.remove('open')
+            })
+
+        </script>
+    </body>
+</html>

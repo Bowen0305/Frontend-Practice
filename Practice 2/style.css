@@ -1,0 +1,256 @@
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* hides the class in desktop window */
+.hide-mobile{
+    display: none;
+}
+
+
+body {
+    background-color: #FFFBF3;
+    margin: 0;
+    font-family: poppins;
+}
+
+.wrap{
+    /* margin works on the outside of the block */
+    margin: 2em;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    background: white;
+    /* 
+        position will fix where it display on the screen
+        displaying on the same location after scrolling
+     */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    margin: 0;
+    /* remove the dots */
+    list-style: none;
+    width: 30%;
+    /* right align the words */
+    text-align: right;
+    /* adding space between the elements in this section */
+    padding: 2em;
+    /* push the whole nav bar off the screen */
+    /* use javascript to modify display     */
+    transform: translateX(100%);
+
+    /* for making the tranform animated smoothly */
+    transition: transform 0.3s ease-in-out;
+    li{
+        margin: 2em 0;
+        /* sudo selector, select the element within unordered list */
+        &:nth-of-type(1){
+            margin-bottom: 4em;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5rem;
+
+            /* what happends when element is hovered */
+            &:hover{
+                color: #FFA800;
+            }
+        }
+    }
+}
+
+.open{
+    transform: translateX(0);
+}
+
+/* hero section */
+h1 , p{
+    text-align: center;
+}
+
+h1{
+    margin-top: 3em;
+
+    img{
+        /* center "Bonkers" on the screen*/
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+a.primary-cta{
+    background-color: #FFA800;
+    /* add space around the word, which is inside the section */
+    padding: 1em;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: black;
+    border-radius: .3em;
+    margin-top: 3em;
+}
+
+.cat{
+    margin-top: 3em;
+    position: relative;
+    height: 500px;
+    width: 100%;
+    /* overflow: hidden; */
+    img{
+        width: 45%;
+        position: absolute;
+
+        /* center the image */
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .inner-circle,.outer-circle{
+        position: absolute;
+        border-radius: 50%;
+
+        /* center the circles both vertically and horizontally */
+        left: 50%;
+        top: 50%;
+        transform:translate(-50% , -50%)
+    }
+
+    .inner-circle{
+        background-color: #FFEBC3;
+        width: 300px;
+        height: 300px;
+        z-index: -1;
+    }
+
+    .outer-circle{
+        background-color: white;
+        width: 500px;
+        height: 500px;
+        z-index: -2;
+    }
+}
+
+/* this media  rule set will only work when the window is at
+    least 900px wide
+*/
+@media(min-width: 900px){
+    .wrap{
+        margin: 0 4em;
+    }
+
+    .hide-desktop{
+        display: none;
+
+    }
+    .hide-mobile{
+        display: block;
+    }
+
+    .header-left{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        /* space between elements */
+        gap: 1em;
+
+        .divider{
+            height:50px;
+            width: 1px;
+            border-right: 1px solid grey;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+        }
+    }
+
+    nav ul{
+        position: unset;
+        background: none;
+        display: flex;
+        gap: 2em;
+        height: auto;
+        width: auto;
+        transform: translateX(0%);
+    }
+}
+
+
+@media(min-width: 1000px){
+    h1,p{
+        text-align: left;
+    }
+    h1 img{
+        margin: 0;
+    }
+    main{
+        width: 50%;
+    }
+
+    .cat{
+        margin-top: 0;
+        overflow: none;
+        .inner-circle{
+            width: 400px;
+            height: 400px;
+        }
+
+        .outer-circle{
+            width:800px;
+            height: 800px;
+        }
+    }
+    .cat-container{
+        position: absolute;
+        z-index: -1;
+        width: 50%;
+        top: 20%;
+        right: 0;
+
+    }
+    a.primary-cta{
+        display: inline-block;
+        width: auto;
+        padding: 1em 2em;
+        margin-top: 1.5em;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .wrap{
+        margin: 0 auto;
+        padding: 0 2em;
+        max-width: 1200px;
+    }
+    
+    .cat{
+        position: relative;
+        img{
+            max-width: 400px;
+            left:50%;
+        }
+    }
+    
+}
